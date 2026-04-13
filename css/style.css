@@ -1,0 +1,322 @@
+/* font */
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2")
+    format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2")
+    format("woff2");
+  font-weight: 900;
+  font-display: swap;
+}
+/* font */
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Pretendard";
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+body {
+  background-color: #fee608;
+}
+/* reset */
+/* header */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  z-index: 100;
+}
+#header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header h1 {
+  width: 40px;
+}
+#header h1 img {
+  display: block;
+  width: 100%;
+}
+#header .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+
+  /* lens effect */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px) saturate(1.5);
+  -webkit-backdrop-filter: blur(10px) saturate(1.5);
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 1px 10px rgba(0, 0, 0, 0.1),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+  /* lens effect */
+}
+/* header */
+/* visual */
+#visual {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+#visual .visual_inner {
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+#visual .visual_inner h2 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: fit-content;
+  font-size: 150px;
+  text-wrap: nowrap;
+  z-index: -1;
+  animation: roll 18s infinite linear;
+}
+#visual .visual_inner h2::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  /* background-color: linear-gradient(
+    100deg,
+    0% rgba(255, 255, 255, 0.1),
+    100% rgba(255, 255, 255, 0.1)
+  ); */
+  backdrop-filter: blur(7px);
+}
+@keyframes roll {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -272%;
+  }
+}
+#visual > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+#visual .card01 {
+  width: 70%;
+  height: 6vw;
+  right: -100%;
+  bottom: 30px;
+  background-color: #fee608;
+  padding: 1rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#visual .card01 p {
+  font-size: 1.4rem;
+}
+#visual .card02 {
+  width: 70%;
+  height: 6vw;
+  right: -102%;
+  bottom: 20px;
+  background-color: #fee608;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  padding: 1rem;
+  position: absolute;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  opacity: 0.8;
+}
+#visual .card02:hover {
+  opacity: 1;
+}
+#visual .card02 p {
+  font-size: 0.8rem;
+  width: 18%;
+  min-width: 150px;
+}
+#visual .card02 .donate_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#visual .card02 .donate_box .checker {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-weight: bold;
+}
+#visual .card02 .donate_box .checker input {
+  appearance: none;
+  width: 2vw;
+  aspect-ratio: 1/1;
+  border: 3px solid #1cabe2;
+  border-radius: 50%;
+  margin-left: 6px;
+}
+#visual .card02 .donate_box .checker input:checked {
+  background-color: #1cabe2;
+  border: 3px solid #fff;
+}
+#visual .card02 .donate_box .checker label {
+  word-break: keep-all;
+  font-size: 1.8vw;
+}
+#visual .card02 .donate_box .amount_input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#visual .card02 .donate_box .amount,
+#visual .card02 .donate_box select {
+  width: 40%;
+  height: 30px;
+  border: 2px solid #1cabe2;
+  font-size: 1.6vw;
+}
+#visual .card02 .donate_box button {
+  width: 24%;
+  height: 30px;
+  font-size: 1.6vw;
+  background-color: #1cabe2;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* visual */
+/* section1 */
+.sec01 {
+  height: 100vh;
+  padding: 4rem;
+}
+.sec01 h2 {
+  font-size: 3vw;
+  margin: 2rem 0;
+}
+.sec01 .sec01_box {
+  height: 80%;
+  position: relative;
+}
+.sec01 .sec01_box li {
+  height: 25%;
+  display: flex;
+  align-items: center;
+}
+.sec01 .sec01_box li label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #999;
+}
+.sec01 .sec01_box li h3,
+.sec01 .sec01_box li p {
+  width: 50%;
+  word-break: keep-all;
+  user-select: none;
+  cursor: pointer;
+}
+.sec01 .sec01_box li h3 {
+  font-size: 2vw;
+}
+.sec01 .sec01_box li p {
+  font-size: 1.6vw;
+}
+.sec01 .sec01_box .img_card {
+  width: 34%;
+  position: absolute;
+  top: 0;
+  left: 14%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.sec01 .sec01_box .img_card img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  position: absolute;
+}
+.sec01 .sec01_box .img_card img:first-child {
+  z-index: 10;
+}
+.sec01 .sec01_box input {
+  display: none;
+}
+.sec01 .sec01_box input:checked + label {
+  text-decoration: underline;
+  color: #333;
+}
+/* section1 */
+/* section2 */
+.sec02 {
+  height: 100vh;
+  padding: 4rem;
+}
+.sec02 h2 {
+  font-size: 3vw;
+  margin: 2rem 0;
+}
+.sec02 .menu_box {
+  background-color: aquamarine;
+}
+/* section2 */
