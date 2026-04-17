@@ -170,7 +170,9 @@ body {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 #visual .card01 p {
-  font-size: 1.4rem;
+  font-size: 2.6vw;
+  font-weight: bold;
+  color: #1cabe2;
 }
 #visual .card02 {
   width: 70%;
@@ -185,30 +187,27 @@ body {
   padding: 1rem;
   position: absolute;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  opacity: 0.8;
-}
-#visual .card02:hover {
-  opacity: 1;
 }
 #visual .card02 p {
-  font-size: 0.8rem;
-  width: 18%;
+  font-size: 0.8vw;
+  width: 14%;
   min-width: 150px;
 }
 #visual .card02 .donate_box {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 70%;
 }
 #visual .card02 .donate_box .checker {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 0.4vw;
   font-weight: bold;
 }
 #visual .card02 .donate_box .checker input {
   appearance: none;
-  width: 2vw;
+  width: 1.8vw;
   aspect-ratio: 1/1;
   border: 3px solid #1cabe2;
   border-radius: 50%;
@@ -220,7 +219,7 @@ body {
 }
 #visual .card02 .donate_box .checker label {
   word-break: keep-all;
-  font-size: 1.8vw;
+  font-size: 1.5vw;
 }
 #visual .card02 .donate_box .amount_input {
   display: flex;
@@ -229,15 +228,15 @@ body {
 }
 #visual .card02 .donate_box .amount,
 #visual .card02 .donate_box select {
-  width: 40%;
-  height: 30px;
+  width: 60%;
+  height: 40px;
   border: 2px solid #1cabe2;
-  font-size: 1.6vw;
+  font-size: 1vw;
 }
 #visual .card02 .donate_box button {
-  width: 24%;
-  height: 30px;
-  font-size: 1.6vw;
+  width: 26%;
+  height: 40px;
+  font-size: 1vw;
   background-color: #1cabe2;
   border: none;
   color: #fff;
@@ -247,15 +246,14 @@ body {
 /* visual */
 /* section1 */
 .sec01 {
-  height: 100vh;
   padding: 4rem;
 }
 .sec01 h2 {
-  font-size: 3vw;
-  margin: 2rem 0;
+  font-size: 2.4vw;
+  margin-bottom: 4rem;
 }
 .sec01 .sec01_box {
-  height: 80%;
+  height: 600px;
   position: relative;
 }
 .sec01 .sec01_box li {
@@ -309,14 +307,617 @@ body {
 /* section1 */
 /* section2 */
 .sec02 {
-  height: 100vh;
   padding: 4rem;
 }
 .sec02 h2 {
-  font-size: 3vw;
-  margin: 2rem 0;
+  font-size: 2.4vw;
+  margin-bottom: 4rem;
 }
 .sec02 .menu_box {
-  background-color: aquamarine;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.sec02 .menu_box input {
+  display: none;
+}
+.sec02 .menu_box label {
+  background-color: #fff;
+  width: 16vw;
+  height: 46px;
+  line-height: 46px;
+  text-align: center;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+.sec02 .content_box {
+  width: 100%;
+}
+.sec02 .content_box .content_card {
+  width: 100%;
+  aspect-ratio: 3/1;
+  margin: 2rem 0;
+  padding: 3rem;
+  border-radius: 10px;
+  color: #fff;
+}
+.content_box .rights {
+  background: url(../img/cover-maeum.png) center/cover no-repeat;
+  display: none;
+}
+.content_box .inbiz {
+  background: url(../img/mainweb_1765327153391.png) center/cover no-repeat;
+  display: none;
+}
+.content_box .overseas {
+  background: url(../img/cover-agency_1.png) center/cover no-repeat;
+  display: none;
+}
+.sec02 .content_box .content_card h3 {
+  font-size: 2rem;
+}
+.sec02 .content_box .content_card p {
+  margin: 3rem 0;
+}
+.sec02 .content_box .content_card .detail_link {
+  display: flex;
+  width: 12vw;
+  min-width: 140px;
+  height: 52px;
+  line-height: 52px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  border: 1px solid #fff;
+  border-radius: 30px;
+}
+.sec02 .content_box .content_card .detail_link .arrbox {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  text-align: center;
+  overflow: hidden;
+}
+.sec02 .content_box .content_card .detail_link .arrbox i {
+  height: 30px;
+  line-height: 30px;
+  flex: 0 0 30px;
+  display: block;
+  transition: 300ms;
+}
+.sec02 .content_box .content_card .detail_link .arrbox i:first-child {
+  margin-left: -30px;
+}
+.sec02 .content_box .content_card:hover .detail_link .arrbox i:first-child {
+  margin-left: 0px;
+}
+#part1:checked ~ .content_box .rights {
+  display: block;
+}
+#part2:checked ~ .content_box .inbiz {
+  display: block;
+}
+#part3:checked ~ .content_box .overseas {
+  display: block;
+}
+
+#part1:checked ~ label[for="part1"] {
+  background-color: #1cabe2;
+  color: #fff;
+}
+#part2:checked ~ label[for="part2"] {
+  background-color: #1cabe2;
+  color: #fff;
+}
+#part3:checked ~ label[for="part3"] {
+  background-color: #1cabe2;
+  color: #fff;
 }
 /* section2 */
+/* section3 */
+.sec03 {
+  padding: 4rem;
+}
+.sec03 h2 {
+  font-size: 2.4vw;
+  margin-bottom: 4rem;
+}
+.sec03 .button_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.sec03 input {
+  display: none;
+}
+.sec03 .button_box label {
+  background-color: #fff;
+  width: 12vw;
+  height: 46px;
+  line-height: 46px;
+  text-align: center;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.2vw;
+  cursor: pointer;
+  user-select: none;
+}
+#a30k:checked ~ label[for="a30k"] {
+  background-color: #1cabe2;
+  color: #fff;
+}
+#a50k:checked ~ label[for="a50k"] {
+  background-color: #1cabe2;
+  color: #fff;
+}
+#a100k:checked ~ label[for="a100k"] {
+  background-color: #1cabe2;
+  color: #fff;
+}
+.sec03 .button_box button {
+  width: 12vw;
+  height: 46px;
+  line-height: 46px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2vw;
+  background-color: #ffef5c;
+  border: none;
+  transition: 300ms;
+  cursor: pointer;
+}
+.sec03 .button_box button:hover {
+  box-shadow:
+    0 6px 7px rgba(0, 0, 0, 0.25) inset,
+    0 2px 3px rgba(0, 0, 0, 0.22) inset;
+}
+.sec03 .select_box {
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  width: 70%;
+  gap: 2rem;
+}
+.sec03 .select_box label {
+  border: 1px solid #1cabe2;
+  color: #1cabe2;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  transition: 150ms ease-in-out;
+  cursor: pointer;
+}
+.sec03 .select_box label i {
+  width: 100%;
+  text-align: center;
+  font-size: 3.4vw;
+}
+.sec03 .select_box label h4 {
+  width: 100%;
+  font-size: 1.2vw;
+  text-align: center;
+}
+#c_edu:checked ~ label[for="c_edu"] {
+  background-color: #1cabe2;
+  color: #fff;
+}
+#c_food:checked ~ label[for="c_food"] {
+  background-color: #1cabe2;
+  color: #fff;
+}
+#c_vac:checked ~ label[for="c_vac"] {
+  background-color: #1cabe2;
+  color: #fff;
+}
+#c_water:checked ~ label[for="c_water"] {
+  background-color: #1cabe2;
+  color: #fff;
+}
+#c_health:checked ~ label[for="c_health"] {
+  background-color: #1cabe2;
+  color: #fff;
+}
+#c_prot:checked ~ label[for="c_prot"] {
+  background-color: #1cabe2;
+  color: #fff;
+}
+.sec03 .select_box label:hover {
+  color: #1cabe2;
+  background-color: #007fb1;
+}
+.sec03 .count_bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.sec03 .count_bar .last_year {
+  display: flex;
+  align-items: end;
+  justify-content: right;
+  font-size: 2vw;
+  width: 44%;
+}
+.sec03 .count_bar .total_amount {
+  display: flex;
+  align-items: end;
+  justify-content: right;
+  font-size: 2vw;
+  width: 44%;
+}
+.sec03 .count_bar span {
+  font-size: 3vw;
+  font-weight: bold;
+  margin: 0 4px;
+  display: block;
+  color: #1cabe2;
+}
+
+/* section3 */
+/* section4 */
+.sec04 {
+  padding: 4rem;
+}
+.sec04 h2 {
+  font-size: 2.4vw;
+  margin-bottom: 4rem;
+}
+.sec04 .sec04_contents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.sec04 .sec04_contents ul {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.sec04 .sec04_contents ul li {
+  aspect-ratio: 1/1.5;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #ffef5c;
+}
+.sec04 ul li img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+  transition: 400ms;
+}
+.sec04 ul li .tbox {
+  width: 100%;
+  aspect-ratio: 2/1;
+  display: flex;
+  padding: 1rem;
+  background-color: #fff;
+}
+.sec04 ul li .tbox p {
+  font-size: 1vw;
+  word-break: keep-all;
+}
+.sec04 ul li .tbox i {
+  width: 14%;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  opacity: 0;
+  transition: 400ms;
+}
+.sec04 ul li a:hover img {
+  border-radius: 50%;
+}
+.sec04 ul li a:hover i {
+  opacity: 1;
+}
+.sec04 .mail_box {
+  background-color: #ffef5c;
+  padding: 2rem;
+  border-radius: 4px;
+  width: 26%;
+}
+.sec04 .mail_box span {
+  width: 100%;
+  color: #999;
+  display: block;
+  font-size: 12px;
+  margin: 40px 0;
+}
+.sec04 .mail_box .input_box {
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  row-gap: 0.4rem;
+}
+.sec04 .mail_box h3 {
+  margin-bottom: 30px;
+}
+.sec04 .mail_box .input_box .inputer {
+  position: relative;
+  height: 30px;
+  width: 80%;
+  margin: 20px 0;
+}
+.sec04 .mail_box .input_box input {
+  appearance: none;
+  height: 100%;
+  width: 100%;
+  border: 2px solid #1cabe2;
+  border-radius: 4px;
+  display: block;
+  outline: none;
+}
+
+.sec04 .mail_box .input_box label {
+  color: #ccc;
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 400ms;
+  z-index: 10;
+  padding: 4px;
+}
+.sec04 .mail_box .input_box input:focus + label {
+  top: -20px;
+  font-size: 12px;
+  color: #1cabe2;
+}
+.sec04 .mail_box .input_box button {
+  width: 40%;
+  height: 30px;
+  background-color: #1cabe2;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+/* section4 */
+/* footer */
+footer {
+  padding: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #ffef5c;
+}
+footer .f_left {
+  width: 60%;
+}
+footer .f_left ul {
+  display: flex;
+  gap: 1vw;
+  font-size: 1.4vw;
+  margin-bottom: 1rem;
+  color: #333;
+}
+footer .f_left p {
+  font-size: 1.4vw;
+  color: #333;
+}
+footer .f_right {
+  width: 40%;
+  text-align: right;
+}
+footer .f_right .sns {
+  display: flex;
+  gap: 5rem;
+}
+footer .f_right .sns li {
+  position: relative;
+}
+footer .f_right .sns li a i {
+  font-size: 20px;
+  color: #333;
+  line-height: 40px;
+  transition: 500ms;
+}
+footer .f_right .sns li a {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  text-align: center;
+  transform: rotate(-30deg) skew(25deg) translate(0, 0);
+  transition: 500ms;
+  box-shadow: -10px 14px 6px rgba(0, 0, 0, 0.5);
+}
+footer .f_right .sns li a:before {
+  content: " ";
+  position: absolute;
+  top: 5px;
+  left: -10px;
+  height: 100%;
+  width: 10px;
+  background-color: #b1b1b1;
+  transition: 500ms;
+  transform: rotate(0deg) skewY(-45deg);
+}
+footer .f_right .sns li a:after {
+  content: " ";
+  position: absolute;
+  bottom: -10px;
+  left: 2px;
+  width: 70%;
+  height: 15px;
+  background-color: #b1b1b1;
+  transition: 500ms;
+  transform: rotate(45deg) skewY(-45deg);
+}
+footer .f_right .sns li a:hover {
+  transform: rotate(-30deg) skew(25deg) translate(6px, -4px);
+  box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
+}
+footer .f_right .sns li:hover i {
+  color: #fff;
+}
+footer .f_right .sns li:hover:nth-child(1) a {
+  background-color: #c13584;
+}
+footer .f_right .sns li:hover:nth-child(1) a:before {
+  background-color: #5b51d8;
+}
+footer .f_right .sns li:hover:nth-child(1) a:after {
+  background-color: #fcaf45;
+}
+
+footer .f_right .sns li:hover:nth-child(2) a {
+  background-color: #ff0000;
+}
+footer .f_right .sns li:hover:nth-child(2) a:before {
+  background-color: #d33434;
+}
+footer .f_right .sns li:hover:nth-child(2) a:after {
+  background-color: #883d3d;
+}
+
+footer .f_right .sns li:hover:nth-child(3) a {
+  background-color: #3b5998;
+}
+footer .f_right .sns li:hover:nth-child(3) a:before {
+  background-color: #4c6497;
+}
+footer .f_right .sns li:hover:nth-child(3) a:after {
+  background-color: #49546b;
+}
+
+footer .f_right .sns li:hover:nth-child(4) a {
+  background-color: #00acee;
+}
+footer .f_right .sns li:hover:nth-child(4) a:before {
+  background-color: #2b9cc9;
+}
+footer .f_right .sns li:hover:nth-child(4) a:after {
+  background-color: #3e788f;
+}
+
+/* footer */
+/* media */
+@media (min-width: 730px) and (max-width: 1200px) {
+  .sec04 .mail_box h3 {
+    margin-bottom: 0px;
+  }
+  .sec04 .sec04_contents ul {
+    width: 100%;
+  }
+  .sec04 .mail_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem 0;
+    width: 100%;
+  }
+  .sec04 .mail_box .input_box {
+    display: flex;
+    width: 60%;
+  }
+  .sec04 .mail_box h3 {
+    width: 30%;
+    text-align: right;
+  }
+  .sec04 .mail_box .input_box .inputer {
+    margin: 0;
+    width: 30%;
+  }
+
+  .sec04 .mail_box .input_box button {
+    width: 26%;
+  }
+  .sec04 .mail_box span {
+    margin: 0;
+  }
+}
+@media (max-width: 800px) {
+  .content h2 {
+    font-size: 1rem;
+  }
+  .sec03 .select_box label i {
+    width: 100%;
+    text-align: center;
+    font-size: 5vw;
+  }
+  .sec03 .select_box label h4 {
+    width: 100%;
+    font-size: 3vw;
+    text-align: center;
+  }
+  footer .f_left {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  footer .f_left ul {
+    display: flex;
+    gap: 0.8vw;
+    font-size: 2.1vw;
+  }
+  footer .f_left p {
+    font-size: 2.1vw;
+  }
+  .sec03 .button_box {
+    gap: 6px;
+  }
+}
+@media (max-width: 729px) {
+  #header .nav {
+    gap: 1rem;
+    padding: 1rem;
+    font-size: 12px;
+  }
+  #header .contact {
+    font-size: 12px;
+  }
+  #visual .card02 p {
+    display: none;
+  }
+  #visual .card02 .donate_box {
+    width: 100%;
+  }
+  #visual .card02 .donate_box .amount,
+  #visual .card02 .donate_box select,
+  #visual .card02 .donate_box button {
+    height: 20px;
+  }
+  .sec03 .select_box {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 10px auto;
+  }
+  .sec03 .count_bar .last_year,
+  .sec03 .count_bar .total_amount {
+    width: 100%;
+    margin: 4px 0;
+  }
+  .sec04 .sec04_contents ul {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sec04 ul li .tbox p {
+    font-size: 1.6vw;
+    word-break: keep-all;
+  }
+  .sec04 .mail_box h3 {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .sec04 .mail_box {
+    margin: 3rem 0;
+    width: 100%;
+  }
+}
+/* media */
