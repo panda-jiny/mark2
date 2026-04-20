@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>SAVEUS</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -24,9 +24,9 @@
         </h1>
         <ul class="nav">
           <li><a href="#">소개</a></li>
-          <li><a href="#">하는 일</a></li>
-          <li><a href="#">후원과 참여</a></li>
-          <li><a href="#">뉴스</a></li>
+          <li><a href="#sec01">하는 일</a></li>
+          <li><a href="#sec03">후원과 참여</a></li>
+          <li><a href="#sec04">뉴스</a></li>
         </ul>
         <div class="contact"><a href="#mailto">CONTACT</a></div>
       </div>
@@ -37,7 +37,7 @@
         <h2>SAVE OUR LIVES, SAVE OUR FUTURE SAVE OUR LIVES, SAVE OUR FUTURE</h2>
       </div>
       <div class="card01">
-        <p>더 늦으면 이 소리조차 들을 수 없을찌도 모릅니다</p>
+        <p>더 늦으면 이 소리조차 들을 수 없을지도 모릅니다</p>
       </div>
       <div class="card02">
         <p>
@@ -70,7 +70,7 @@
       </div>
     </div>
     <div class="content">
-      <section class="sec01">
+      <section id="sec01" class="sec01">
         <h2>어떤 일을 하나요?</h2>
         <ul class="sec01_box">
           <li>
@@ -121,7 +121,7 @@
           </li>
         </ul>
       </section>
-      <section class="sec02">
+      <section id="sec02" class="sec02">
         <h2>아이들이 후원을 통해 어떤 도움을 받나요?</h2>
         <div class="menu_box">
           <input type="radio" name="menu" id="part1" checked />
@@ -183,7 +183,7 @@
           </div>
         </div>
       </section>
-      <section class="sec03">
+      <section id="sec03" class="sec03">
         <h2>어떻게 후원할 수 있나요?</h2>
         <div class="button_box">
           <h4>매 월</h4>
@@ -196,7 +196,7 @@
           <button>정기후원하기</button>
         </div>
         <div class="select_box">
-          <input type="radio" name="category" id="c_edu" />
+          <input type="radio" name="category" id="c_edu" checked />
           <input type="radio" name="category" id="c_food" />
           <input type="radio" name="category" id="c_vac" />
           <input type="radio" name="category" id="c_water" />
@@ -240,7 +240,7 @@
           </div>
         </div>
       </section>
-      <section class="sec04">
+      <section id="sec04" class="sec04">
         <h2>NEWS</h2>
         <div class="sec04_contents">
           <ul>
@@ -347,5 +347,6 @@
     <script src="js/visual_gsap.js"></script>
     <script src="js/section1.js"></script>
     <script src="js/section3.js"></script>
+    <script src="js/showup.js"></script>
   </body>
 </html>

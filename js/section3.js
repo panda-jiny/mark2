@@ -5,7 +5,7 @@ $(window).on("scroll", function () {
   pos = $(this).scrollTop();
   // console.log(pos);
 
-  if (pos >= target && !sc) {
+  if (pos >= target - 300 && !sc) {
     sc = true;
     let num1 = 0; /*시작값*/
     let num2 = 0;
